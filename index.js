@@ -1,6 +1,6 @@
-const mqtt = require('mqtt');
+import { connect } from 'mqtt';
 
-const client = mqtt.connect('mqtt://test.mosquitto.org');
+const client = connect('mqtt://test.mosquitto.org');
 
 client.on('connect', () => {
   client.subscribe('presence', (err) => {
