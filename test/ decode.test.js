@@ -1,17 +1,12 @@
-const assert = require('assert');
-const mocha = require('mocha');
+import { equal } from 'assert';
+import { describe, it } from 'mocha';
 
-const ecstream = require('../index');
+import { decode } from '../index';
 
-mocha.describe('decoding test suite', function () {
-  mocha.it('Decode bad stripe size', function (done) {
-    try {
-      var results  = ecstream.decode([0x23, 0x23]);
-      assert.ok(undefined); // Unreachable
-    } catch (error) {
-      assert.ok(error instanceof assert.AssertionError);
-      done();
-    }
+describe('decoding test suite', function () {
+  it('Decode bad stripe size', function () {
+      var results  = decode([0x23, 0x23]);
+      equal(26, results.sats);
   });
 
 });

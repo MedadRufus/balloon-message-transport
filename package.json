@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha --use_strict --check-leaks ",
     "lint": "npx eslint . --ext .js --ext .ts --fix",
     "start": "node index.js"
   },
