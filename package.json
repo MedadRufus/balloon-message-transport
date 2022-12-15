@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "npx eslint . --ext .js --ext .ts --fix"
+    "lint": "npx eslint . --ext .js --ext .ts --fix",
+    "start": "node index.js"
   },
   "author": "",
   "license": "MIT",
