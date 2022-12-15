@@ -1,11 +1,11 @@
-const assert = require('assert');
-const mocha = require('mocha');
+import { equal } from 'assert';
+import { describe, it } from 'mocha';
 
-const decode = require('../lib/decode');
+import { decode as _decode } from '../lib/decode.js';
 
-mocha.describe('decoding test suite', () => {
-  mocha.it('Decode bad stripe size', () => {
-    const results = decode.decode([0x23, 0x23]);
-    assert.equal(26, results.sats);
+describe('decoding test suite', () => {
+  it('Decode bad stripe size', () => {
+    const results = _decode([0x23, 0x23]);
+    equal(26, results.sats);
   });
 });
