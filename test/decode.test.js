@@ -39,5 +39,11 @@ describe('decoding test suite', () => {
     equal(51.969255, results.data.pastPositions[1].latitude);
     equal(51.969255, results.data.pastPositions[2].latitude);
     equal(51.969255, results.data.pastPositions[3].latitude);
+
+    /* Past position unix timestamps */
+    equal(1641978421, results.data.pastPositions[0].tsUnix);
+    equal(1641734341, results.data.pastPositions[1].tsUnix);
+    equal(1640956321, results.data.pastPositions[2].tsUnix);
+    equal(1641382261, results.data.pastPositions[3].tsUnix);
   });
 });
