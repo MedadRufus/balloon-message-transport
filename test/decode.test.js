@@ -21,5 +21,23 @@ describe('decoding test suite', () => {
     equal(3.7, results.data.noloadVoltage);
     equal(2.1, results.data.loadVoltage);
     equal(11, results.data.days_of_playback);
+
+    /* Past position altitudes */
+    equal(19.89, results.data.pastPositions[0].altitude);
+    equal(10.2, results.data.pastPositions[1].altitude);
+    equal(15.3, results.data.pastPositions[2].altitude);
+    equal(16.575, results.data.pastPositions[3].altitude);
+
+    /* Past position longitudes */
+    equal(1.3696815, results.data.pastPositions[0].longitude);
+    equal(1.3696815, results.data.pastPositions[1].longitude);
+    equal(1.3696815, results.data.pastPositions[2].longitude);
+    equal(1.3696815, results.data.pastPositions[3].longitude);
+
+    /* Past position latitudes */
+    equal(51.969255, results.data.pastPositions[0].latitude);
+    equal(51.969255, results.data.pastPositions[1].latitude);
+    equal(51.969255, results.data.pastPositions[2].latitude);
+    equal(51.969255, results.data.pastPositions[3].latitude);
   });
 });
