@@ -8,7 +8,7 @@ describe('decoding test suite', () => {
   const testString = 'nMsAMQXxHrsAjg36HtEATgCmTxD6HtEAKADCPxD6HtEAPAAbDRD6HtEAQQDWKBA=';
   const testStringArray = Buffer.from(testString, 'base64');
 
-  it('Decode packet', () => {
+  it('Decode frame', () => {
     const results = _decode(testStringArray);
     equal(1.2255045, results.data.longitude);
     equal(51.9102735, results.data.latitude);
