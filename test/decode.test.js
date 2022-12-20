@@ -22,7 +22,7 @@ describe('decoding test suite', () => {
     equal(3.7, results.noloadVoltage);
     equal(2.1, results.loadVoltage);
     equal(11, results.days_of_playback);
-    equal(28, results.solarElevtationRads);
+    equal(12.78, results.solarElevtationRads);
 
     /* Past position altitudes */
     equal(19.89, results.pastPositions[0].altitude);
