@@ -6,11 +6,11 @@ import { decode as _decode } from '../lib/decode.js';
 describe('decoding test suite', () => {
   // convert from base64 to bytearray
   const testString = 'nMsAMQXxHrsAjg36HtEATgCmTxD6HtEAKADCPxD6HtEAPAAbDRD6HtEAQQDWKBA=';
-  const received_timestamp = 1641996018484;
+  const receivedTimestamp = 1641996018484;
   const testStringArray = Buffer.from(testString, 'base64');
 
   it('Decode frame', () => {
-    const results = _decode(testStringArray, received_timestamp);
+    const results = _decode(testStringArray, receivedTimestamp);
     expect(results.longitude).to.be.closeTo(1.2255045, 0.00001);
     expect(results.latitude).to.be.closeTo(51.9102735, 0.00001);
     equal(3470, results.altitude);
