@@ -1,6 +1,6 @@
 import { equal } from 'assert';
+import { expect } from 'chai';
 import { describe, it } from 'mocha';
-
 import { decode as _decode } from '../lib/decode.js';
 
 describe('decoding test suite', () => {
@@ -22,7 +22,7 @@ describe('decoding test suite', () => {
     equal(3.7, results.noloadVoltage);
     equal(2.1, results.loadVoltage);
     equal(11, results.days_of_playback);
-    equal(12.78, results.solarElevtationRads);
+    expect(results.solarElevtationDeg).to.be.closeTo(12.15, 0.01);
 
     /* Past position altitudes */
     equal(19.89, results.pastPositions[0].altitude);
