@@ -12,7 +12,8 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "mqtt": "^4.3.7"
+    "mqtt": "^4.3.7",
+    "suncalc": "^1.9.0"
   },
   "devDependencies": {
     "assert": "^2.0.0",
